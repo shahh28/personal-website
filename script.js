@@ -98,7 +98,8 @@ if (form) {
 
             if (res.ok) {
                 form.reset();
-                form.style.display   = 'none';
+                form.style.visibility = 'hidden';
+                form.style.opacity    = '0';
                 formMessage.style.display = 'block';
             } else {
                 throw new Error('Server error');

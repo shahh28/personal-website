@@ -499,6 +499,18 @@ section { padding: 110px 0; }
    ============================================================ */
 .about { background: rgba(255,245,235,0.55); }
 
+.about-link {
+    color: var(--amber);
+    font-weight: 600;
+    border-bottom: 1.5px solid rgba(232,117,42,0.35);
+    transition: border-color var(--t), color var(--t);
+}
+.about-link:hover {
+    color: var(--coral);
+    border-bottom-color: var(--coral);
+}
+
+
 .about-grid {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -584,10 +596,10 @@ section { padding: 110px 0; }
     box-shadow: var(--shadow-sm);
 }
 
-.badge-uber  { background: var(--grad-sunset); }
-.badge-arkra { background: linear-gradient(135deg, #F4A261, #E85D42); }
-.badge-igh   { background: linear-gradient(135deg, #E8752A, #C9A0DC); }
-.badge-nasa  { background: linear-gradient(135deg, #1a1a2e, #16213e); }
+.badge-uber  { background: linear-gradient(135deg, #E8752A, #A18CD1); }
+.badge-arkra { background: linear-gradient(135deg, #E8752A, #A18CD1); }
+.badge-igh   { background: linear-gradient(135deg, #E8752A, #A18CD1); }
+.badge-nasa  { background: linear-gradient(135deg, #E8752A, #A18CD1); }
 
 .exp-connector {
     width: 2px;
@@ -830,39 +842,36 @@ section { padding: 110px 0; }
    Skills
    ============================================================ */
 .skills-layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-    gap: 1.5rem;
-}
-
-.skill-group {
+    display: flex;
+    flex-direction: column;
     background: #fff;
-    border-radius: var(--r-lg);
-    padding: 1.75rem 2rem;
+    border-radius: var(--r-xl);
+    padding: 0.5rem 2.5rem;
     box-shadow: var(--shadow-xs);
     border: 1px solid rgba(232,117,42,0.08);
-    transition: box-shadow var(--t);
 }
-.skill-group:hover { box-shadow: var(--shadow-sm); }
 
-.sg-title {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--dark);
+.skill-row {
     display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1.5px solid rgba(232,117,42,0.10);
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1.75rem 0;
 }
 
-.sg-dot {
-    display: inline-block;
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    background: var(--grad-sunset);
+.sr-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--light);
+    min-width: 130px;
     flex-shrink: 0;
+    padding-top: 6px;
+}
+
+.skills-divider {
+    height: 1px;
+    background: rgba(232,117,42,0.08);
 }
 
 .skill-tags {
