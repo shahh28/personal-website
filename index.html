@@ -3,391 +3,485 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shah Rahman - Personal Portfolio</title>
+    <title>Shah Rahman — Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,700;1,300&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Ambient background orbs -->
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Shah Rahman</a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+            <a href="#home" class="nav-logo">SR</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ============================================================ -->
+    <!-- HERO                                                          -->
+    <!-- ============================================================ -->
     <section id="home" class="hero">
         <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Shah Rahman</span></h1>
-                <p class="hero-subtitle">Software Engineer Intern @ Arkra | CS @ NJIT</p>
-                <p class="hero-description">
-                    I create innovative digital solutions that make a difference. 
-                    Passionate about clean code, user experience, and continuous learning.
+            <div class="hero-text reveal">
+                <p class="hero-eyebrow">Hello, I'm</p>
+                <h1 class="hero-name">Shah <span class="name-accent">Rahman</span></h1>
+                <p class="hero-role">Software Engineer <span class="role-dot">·</span> AI Data Analyst</p>
+                <p class="hero-sub">Uber AI Solutions &amp; CS @ NJIT &thinsp;·&thinsp; Expected May 2027</p>
+                <p class="hero-desc">
+                    I build intelligent systems and craft clean, scalable software —
+                    from ML pipelines and serverless APIs to full-stack web applications.
                 </p>
-                <div class="hero-buttons">
+                <div class="hero-ctas">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    <a href="Shah_Rahman_SoftwareEngineer.pdf" target="_blank" rel="noopener" class="btn btn-ghost">
+                        <i class="fas fa-download"></i>&nbsp;Resume
+                    </a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/shahh28" target="_blank" rel="noopener" class="hero-social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/shahrahman28/" target="_blank" rel="noopener" class="hero-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:shahrahman0628@gmail.com" class="hero-social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="profile-placeholder">
+
+            <div class="hero-image reveal">
+                <div class="photo-frame">
+                    <div class="photo-glow"></div>
                     <img src="profile.png" alt="Shah Rahman" class="profile-photo">
+                    <div class="photo-ring"></div>
                 </div>
             </div>
         </div>
+
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ============================================================ -->
+    <!-- ABOUT                                                         -->
+    <!-- ============================================================ -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
+            <div class="section-header reveal">
+                <span class="section-label">About</span>
+                <h2 class="section-title">Who I Am</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
                     <p>
-                        I'm a Computer Science student at NJIT with a love for creating meaningful digital experiences. 
-                        I enjoy working across the stack, from building clean UIs to writing efficient backend logic.
+                        I'm a Computer Science student at NJIT who genuinely loves to build. Whether it's
+                        training a machine learning model, setting up cloud infrastructure, or crafting a
+                        clean UI, I like working across the whole picture.
                     </p>
                     <p>
-                        Recently, I've built an NFL Fantasy Football assistant that uses AI and a custom machine learning model to help users make informed football decisions.
-                        I'm always looking to improve my skills in machine learning and backend development.
+                        I've spent the past year interning across some really different domains — evaluating
+                        AI model outputs at Uber AI Solutions, building data pipelines for fintech at Arkra,
+                        and engineering AI agents for legal research at Innovative Global Holdings. Each one
+                        taught me something different about what good software actually looks like in practice.
                     </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>2+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat">
-                            <h3>5+</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat">
-                            <h3>30+</h3>
-                            <p>Technologies Mastered</p>
-                        </div>
-                    </div>
+                    <p>
+                        Outside of work, I'm a huge NFL fan and a fantasy football addict. It got bad enough
+                        that I built a full projections engine to help me win my league.
+                    </p>
                 </div>
-                <div class="about-image">
-                    <div class="about-placeholder">
-                        <i class="fas fa-code"></i>
+
+                <div class="about-stats reveal">
+                    <div class="stat-card">
+                        <span class="stat-num">5+</span>
+                        <span class="stat-label">Years of Experience</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">5+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">30+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">2027</span>
+                        <span class="stat-label">Expected Grad</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Fantasy Projections Engine</h3>
-                        <p class="project-description">
-                            A machine learning model written in Python using scikit-learn and NumPy to forecast NFL fantasy football performance based on 5+ years of
-                            data from over 600 players.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                            <span class="tech-tag">NumPy</span>
-                            <span class="tech-tag">Pandas</span>
-                        </div>
-                        <div class="project-links">
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Fantasy Football Advisor</h3>
-                        <p class="project-description">
-                            A full-stack chatbot powered by OpenAI's GPT-4o model that uses the RAG (Retrieval-Augmented Generation) technique to answer user inquiries about NFL fantasy football.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">OpenAI</span>
-                            <span class="tech-tag">LangChain</span>
-                        </div>
-                        <div class="project-links">
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">NASA Hunch</h3>
-                        <p class="project-description">
-                            Designed and built a prototype for a zero-gravity duster arm as part of a team of 20+ to be used in the International Space Station.
-                            Created a script with ROBOTC, creating a feasible motion path for the duster arm to meet NASA design requirements.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">ROBOTC</span>
-                            <span class="tech-tag">G-code</span>
-                            <span class="tech-tag">AutoCAD</span>
-                            <span class="tech-tag">SolidWorks</span>
-                        </div>
-                        <div class="project-links">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Work Experience Section -->
+    <!-- ============================================================ -->
+    <!-- EXPERIENCE                                                     -->
+    <!-- ============================================================ -->
     <section id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="experience-cards-container">
-                <div class="experience-single-card">
-                    <div class="experience-header">
-                        <h3 class="job-title">Software Engineer Intern</h3>
-                        <span class="company">Innovative Global Holdings LLC</span>
-                        <span class="duration">Feb 2025 - Present</span>
+            <div class="section-header reveal">
+                <span class="section-label">Experience</span>
+                <h2 class="section-title">Where I've Worked</h2>
+            </div>
+
+            <div class="exp-list">
+
+                <!-- Uber AI -->
+                <div class="exp-card reveal">
+                    <div class="exp-card-left">
+                        <div class="exp-badge badge-uber"><i class="fas fa-robot"></i></div>
+                        <div class="exp-connector"></div>
                     </div>
-                    <p class="job-description">
-                        Built and designed automation scripts to streamline company operations.
-                    </p>
-                    <ul class="job-achievements">
-                        <li>Designed and documented a Google-Cloud-based automation system using Sheets, Drive, and Gmail APIs to streamline lead management.</li>
-                        <li>Engineered a deep research agent with n8n and JavaScript that performs comprehensive legal research from user input, supporting complex case analysis and enhancing due diligence.</li>
-                        <li>Developed an LLM rerouter using n8n, JavaScript, and the OpenRouter API to dynamically select and route prompts to the most suitable AI model, optimizing legal research and document analysis.</li>
-                    </ul>
-                </div>
-                
-                <div class="experience-single-card">
-                    <div class="experience-header">
-                        <h3 class="job-title">Software Engineer Intern</h3>
-                        <span class="company">Arkra</span>
-                        <span class="duration">Sep 2025 - Present</span>
+                    <div class="exp-body">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-role">AI Data Analyst</h3>
+                                <p class="exp-company">Uber AI Solutions</p>
+                            </div>
+                            <span class="exp-date-pill">Sept 2025 — Present</span>
+                        </div>
+                        <p class="exp-meta">Freelance · San Francisco, CA</p>
+                        <ul class="exp-bullets">
+                            <li>Analyzed and scored AI-generated responses across accuracy, depth, and clarity to ensure high-quality model outputs.</li>
+                            <li>Developed evaluation frameworks that improved team alignment and reduced subjective judgment across reviewers.</li>
+                        </ul>
                     </div>
-                    <p class="job-description">
-                        AI Team
-                    </p>
-                    <ul class="job-achievements">
-                        <li>Engineered a web scraper pipeline using Python, Requests, and Pandas to extract and structure lender data,
-                            capturing loan products, requirements, rates, and financial metrics for streamlined MQL to SQL qualification. </li>
-                        <li>Automated classification and filtering of lenders, implemented Selenium fallbacks for anti-bot protections, and
-                            delivered structured CSV output for the sales team.</li>
-                    </ul>
                 </div>
+
+                <!-- Arkra -->
+                <div class="exp-card reveal">
+                    <div class="exp-card-left">
+                        <div class="exp-badge badge-arkra"><i class="fas fa-code"></i></div>
+                        <div class="exp-connector"></div>
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-role">Software Engineering Intern</h3>
+                                <p class="exp-company">Arkra</p>
+                            </div>
+                            <span class="exp-date-pill">Sept – Dec 2025</span>
+                        </div>
+                        <p class="exp-meta">Internship · Newport Beach, CA</p>
+                        <ul class="exp-bullets">
+                            <li>Engineered a web scraper pipeline using Python, Requests, and Pandas to extract and structure lender data for 500+ lenders.</li>
+                            <li>Automated lender classification and filtering; implemented Playwright fallbacks for anti-bot protections.</li>
+                            <li>Delivered structured JSON outputs to the sales team, streamlining MQL-to-SQL qualification.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- IGH -->
+                <div class="exp-card reveal">
+                    <div class="exp-card-left">
+                        <div class="exp-badge badge-igh"><i class="fas fa-balance-scale"></i></div>
+                        <div class="exp-connector"></div>
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-role">Software Engineering Intern</h3>
+                                <p class="exp-company">Innovative Global Holdings</p>
+                            </div>
+                            <span class="exp-date-pill">Mar – Aug 2025</span>
+                        </div>
+                        <p class="exp-meta">Internship · Charlotte, NC</p>
+                        <ul class="exp-bullets">
+                            <li>Designed a Google Cloud automation system (Sheets, Drive, Gmail, OpenAI APIs) to streamline follow-up emails for 200+ leads.</li>
+                            <li>Engineered a deep research agent with n8n and JavaScript for comprehensive legal research from user input.</li>
+                            <li>Built an LLM rerouter using n8n, JavaScript, and the OpenRouter API to dynamically route prompts to the optimal AI model.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- NASA -->
+                <div class="exp-card reveal">
+                    <div class="exp-card-left">
+                        <div class="exp-badge badge-nasa"><i class="fas fa-rocket"></i></div>
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-role">Robotics Software Lead</h3>
+                                <p class="exp-company">NASA HUNCH Program</p>
+                            </div>
+                            <span class="exp-date-pill">Nov 2023 – May 2024</span>
+                        </div>
+                        <p class="exp-meta">Leadership · Wayne, NJ</p>
+                        <ul class="exp-bullets">
+                            <li>Led software development for a zero-gravity duster arm prototype designed for the International Space Station.</li>
+                            <li>Developed a ROBOTC program to execute a precise motion path meeting NASA design requirements, leading a team of 20+.</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ============================================================ -->
+    <!-- PROJECTS                                                       -->
+    <!-- ============================================================ -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Projects</span>
+                <h2 class="section-title">Things I've Built</h2>
+            </div>
+
+            <!-- Featured -->
+            <div class="project-featured reveal">
+                <div class="pf-content">
+                    <span class="pf-label">Featured Project</span>
+                    <h3 class="pf-title">Fantasy Projections Engine</h3>
+                    <p>
+                        End-to-end NFL fantasy football projections pipeline — ingesting 8 seasons of player data
+                        (2016–2023) into PostgreSQL with rolling window features and strict temporal train/test splits.
+                        Trained an XGBoost regression model with position-specific evaluation, opponent defensive
+                        rankings, snap percentage imputation, and 9 derived features.
+                    </p>
+                    <p>
+                        Deployed a serverless REST API serving 50+ player predictions via Docker, AWS Lambda, S3,
+                        and API Gateway through Serverless Framework. Visualized through an Angular dashboard.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">XGBoost</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">AWS Lambda</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Angular</span>
+                        <span class="tag">S3</span>
+                        <span class="tag">API Gateway</span>
+                    </div>
+                </div>
+                <div class="pf-visual">
+                    <div class="pf-icon-ring">
+                        <div class="pf-glow"></div>
+                        <i class="fas fa-football-ball"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other projects grid -->
+            <div class="projects-grid">
+
+                <div class="project-card reveal">
+                    <div class="pc-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Fantasy Football Advisor</h3>
+                    <p>
+                        Full-stack RAG-powered chatbot using GPT-4o to answer NFL fantasy football questions
+                        with Retrieval-Augmented Generation and real-time data lookup.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">OpenAI</span>
+                        <span class="tag">LangChain</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">HTML/CSS</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="pc-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>NASA HUNCH Duster Arm</h3>
+                    <p>
+                        Zero-gravity duster arm prototype for the ISS featuring a ROBOTC-programmed
+                        motion path that meets NASA engineering design requirements.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">ROBOTC</span>
+                        <span class="tag">AutoCAD</span>
+                        <span class="tag">Inventor</span>
+                        <span class="tag">Multisim</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SKILLS                                                         -->
+    <!-- ============================================================ -->
     <section id="skills" class="skills">
-        <div class="skills-center-container" style="max-width: 1100px; margin: 0 auto;">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-content">
-                <div class="skills-category">
-                    <h3 class="category-title">Frontend Development</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                            <span class="skill-name">HTML5</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-css3-alt"></i>
-                            </div>
-                            <span class="skill-name">CSS3</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-js-square"></i>
-                            </div>
-                            <span class="skill-name">JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-react"></i>
-                            </div>
-                            <span class="skill-name">React</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-vuejs"></i>
-                            </div>
-                            <span class="skill-name">Vue.js</span>
-                        </div>
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Skills</span>
+                <h2 class="section-title">What I Work With</h2>
+            </div>
+
+            <div class="skills-layout">
+                <div class="skill-group reveal">
+                    <h3 class="sg-title"><span class="sg-dot"></span>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="stag">Python</span>
+                        <span class="stag">Java</span>
+                        <span class="stag">C++</span>
+                        <span class="stag">JavaScript</span>
+                        <span class="stag">HTML</span>
+                        <span class="stag">CSS</span>
+                        <span class="stag">SQL</span>
+                        <span class="stag">Jinja</span>
                     </div>
                 </div>
 
-                <div class="skills-category">
-                    <h3 class="category-title">Backend Development</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-node-js"></i>
-                            </div>
-                            <span class="skill-name">Node.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <span class="skill-name">Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <span class="skill-name">SQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <span class="skill-name">MongoDB</span>
-                        </div>
+                <div class="skill-group reveal">
+                    <h3 class="sg-title"><span class="sg-dot"></span>Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="stag">React</span>
+                        <span class="stag">Angular</span>
+                        <span class="stag">Vue.js</span>
+                        <span class="stag">Node.js</span>
+                        <span class="stag">Flask</span>
+                        <span class="stag">LangChain</span>
+                        <span class="stag">.NET</span>
+                        <span class="stag">AWS SAM</span>
                     </div>
                 </div>
 
-                <div class="skills-category">
-                    <h3 class="category-title">Tools & Others</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-git-alt"></i>
-                            </div>
-                            <span class="skill-name">Git</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-docker"></i>
-                            </div>
-                            <span class="skill-name">Docker</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-aws"></i>
-                            </div>
-                            <span class="skill-name">AWS</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <span class="skill-name">Responsive Design</span>
-                        </div>
+                <div class="skill-group reveal">
+                    <h3 class="sg-title"><span class="sg-dot"></span>Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="stag">AWS Lambda</span>
+                        <span class="stag">S3</span>
+                        <span class="stag">API Gateway</span>
+                        <span class="stag">CloudWatch</span>
+                        <span class="stag">Docker</span>
+                        <span class="stag">Google Cloud</span>
+                        <span class="stag">Git</span>
+                        <span class="stag">Serverless</span>
+                    </div>
+                </div>
+
+                <div class="skill-group reveal">
+                    <h3 class="sg-title"><span class="sg-dot"></span>Data & ML</h3>
+                    <div class="skill-tags">
+                        <span class="stag">NumPy</span>
+                        <span class="stag">Pandas</span>
+                        <span class="stag">XGBoost</span>
+                        <span class="stag">scikit-learn</span>
+                        <span class="stag">Matplotlib</span>
+                        <span class="stag">PostgreSQL</span>
+                        <span class="stag">SQLite</span>
+                        <span class="stag">SQLAlchemy</span>
+                    </div>
+                </div>
+
+                <div class="skill-group reveal">
+                    <h3 class="sg-title"><span class="sg-dot"></span>Automation & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="stag">Selenium</span>
+                        <span class="stag">Playwright</span>
+                        <span class="stag">BeautifulSoup</span>
+                        <span class="stag">n8n</span>
+                        <span class="stag">OpenRouter</span>
+                        <span class="stag">Pydantic</span>
+                        <span class="stag">AutoCAD</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ============================================================ -->
+    <!-- CONTACT                                                        -->
+    <!-- ============================================================ -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's work together!</h3>
-                    <p>
-                        I'm always interested in new opportunities and exciting projects. 
-                        Whether you have a question or just want to say hi, feel free to reach out!
+            <div class="section-header reveal">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Let's Connect</h2>
+            </div>
+
+            <div class="contact-layout">
+                <div class="contact-info reveal">
+                    <p class="contact-intro">
+                        Always open to new opportunities, collaborations, or just a good tech
+                        conversation. Drop me a message!
                     </p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>shahrahman0628@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Paterson, NJ</span>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/shahrahman28/" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/shahh28" class="social-link"><i class="fab fa-github"></i></a>
+
+                    <div class="contact-links">
+                        <a href="mailto:shahrahman0628@gmail.com" class="contact-link">
+                            <div class="cl-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="cl-label">Email</span>
+                                <span class="cl-val">shahrahman0628@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shahrahman28/" target="_blank" rel="noopener" class="contact-link">
+                            <div class="cl-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div>
+                                <span class="cl-label">LinkedIn</span>
+                                <span class="cl-val">linkedin.com/in/shahrahman28</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/shahh28" target="_blank" rel="noopener" class="contact-link">
+                            <div class="cl-icon"><i class="fab fa-github"></i></div>
+                            <div>
+                                <span class="cl-label">GitHub</span>
+                                <span class="cl-val">github.com/shahh28</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div class="contact-form">
+
+                <div class="contact-form-wrap reveal">
                     <form id="contactForm" action="https://formspree.io/f/mpwladll" method="POST">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Your message..." rows="5" required></textarea>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            Send Message &nbsp;<i class="fas fa-paper-plane"></i>
+                        </button>
                     </form>
+
                     <div id="formMessage" style="display:none;">
                         <div class="thankyou-card">
-                            <div class="thankyou-icon">
-                                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="28" cy="28" r="28" fill="url(#sunset-gradient)"/>
-                                    <path d="M18 29.5L25 36.5L38 22.5" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <div class="ty-icon">
+                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                                    <circle cx="32" cy="32" r="32" fill="url(#tg)"/>
+                                    <path d="M22 33L29 40L43 26" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     <defs>
-                                        <linearGradient id="sunset-gradient" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#ffb347"/>
-                                            <stop offset="0.5" stop-color="#ff7e5f"/>
-                                            <stop offset="1" stop-color="#a18cd1"/>
+                                        <linearGradient id="tg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FFB347"/>
+                                            <stop offset="0.5" stop-color="#FF7E5F"/>
+                                            <stop offset="1" stop-color="#A18CD1"/>
                                         </linearGradient>
                                     </defs>
                                 </svg>
                             </div>
-                            <div class="thankyou-text">
-                                <h3>Thank you!</h3>
-                                <p>I will reach out soon.</p>
-                            </div>
+                            <h3>Message sent!</h3>
+                            <p>Thanks for reaching out — I'll get back to you soon.</p>
                         </div>
                     </div>
                 </div>
@@ -397,46 +491,16 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Shah Rahman. All rights reserved.</p>
-                <p>Built with passion and strawberry ice cream.</p>
+        <div class="container footer-inner">
+            <p>© 2026 Shah Rahman. Built with care.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/shahh28" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/shahrahman28/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:shahrahman0628@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('contactForm');
-      const formMessage = document.getElementById('formMessage');
-      if (form) {
-        form.addEventListener('submit', async function(e) {
-          e.preventDefault();
-          const data = new FormData(form);
-          try {
-            const response = await fetch(form.action, {
-              method: 'POST',
-              body: data,
-              headers: { 'Accept': 'application/json' }
-            });
-            if (response.ok) {
-              form.reset();
-              form.style.display = 'none';
-              formMessage.style.display = 'block';
-            } else {
-              formMessage.textContent = 'Oops! Something went wrong. Please try again later.';
-              formMessage.style.color = '#D8000C';
-              formMessage.style.display = 'block';
-            }
-          } catch (error) {
-            formMessage.textContent = 'Oops! Something went wrong. Please try again later.';
-            formMessage.style.color = '#D8000C';
-            formMessage.style.display = 'block';
-          }
-        });
-      }
-    });
-    </script>
 </body>
 </html>
